@@ -1,0 +1,170 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'cart.css' %}">
+</head>
+<body>
+
+
+<div class="cart-container">
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+    <div class="cart-header-container" style="float: left;">
+        <a href="{% url 'index' %}">
+            <button class="back-button">← {% trans 'Back' %}</button>
+        </a>
+    </div>
+    <h1 style="margin-right: 130px;">{% trans 'Cart' %}</h1>
+
+    <div class="cart-content">
+        <table class="cart-table">
+            <thead>
+            <tr>
+                <th>{% trans 'Product' %}</th>
+                <th>{% trans 'Size' %}</th>
+                <th>{% trans 'Price' %}</th>
+                <th>{% trans 'Quantity' %}</th>
+                <th>{% trans 'Subtotal' %}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cart_items %}
+                <tr data-slug="{{ item.product.slug }}" data-size="{{ item.size }}">
+                    <td class="product">
+                        <form action="{% url 'delete-product' item.product.slug %}">
+                            {% csrf_token %}
+                            <input name="size" type="hidden" value="{{ item.size }}">
+                            <button type="submit" class="remove-product">×</button>
+                        </form>
+                        {% with item.product.images.all|first as image %}
+                            {% if image %}
+                                <img src="{{ image.image.url }}" alt="">
+                            {% else %}
+                                <p>No image available for this product.</p>
+                            {% endif %}
+                        {% endwith %}
+                        <span>{{ item.product.name }}</span>
+                    </td>
+                    {% if item.size %}
+                        <td>{{ item.size }}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                    <td class="product-price">{{ item.product.price|intcomma }} so'm</td>
+                    <td class="quantity-selector">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <button class="quantity-button" name="action" value="decrease">
+                                -
+                            </button>
+                            <input type="number" value="{{ item.quantity }}" class="quantity-input"
+                                   id="quantity-input-{{ item.product.id }}" name="quantity-{{ item.product.id }}"
+                                   readonly>
+                            <button class="quantity-button" name="action" value="increase">
+                                +
+                            </button>
+                        </form>
+                    </td>
+                    <td class="product-subtotal">{{ item.get_subtotal|intcomma }} so'm</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="cart-totals">
+            <h2>{% trans 'Cart totals' %}</h2>
+            <table>
+                <tr>
+                    <td>{% trans 'Subtotal' %}</td>
+                    <td id="subtotal">{{ cart_subtotal }} so'm</td>
+                </tr>
+                <tr>
+                    <td>{% trans 'Total' %}</td>
+                    <td id="total">{{ cart_subtotal }} so'm</td>
+                </tr>
+            </table>
+            <a href="{% url 'ordering' %}" class="checkout-button">{% trans 'Ordering' %}</a>
+        </div>
+
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const quantityButtons = document.querySelectorAll('.quantity-button');
+    const subtotalElement = document.getElementById('subtotal');
+    const totalElement = document.getElementById('total');
+
+    quantityButtons.forEach(button => {
+        button.addEventListener('click', async (event) => {
+            event.preventDefault();
+
+            const action = button.value;
+            const input = button.parentElement.querySelector('.quantity-input');
+            const productRow = button.closest('tr');
+            const slug = productRow.dataset.slug;
+            const size = productRow.dataset.size;
+            let quantity = parseInt(input.value);
+
+            if (action === 'increase') {
+                quantity += 1;
+            } else if (action === 'decrease' && quantity > 0) {
+                quantity -= 1;
+            }
+
+            if (quantity <= 0) {
+                // Agar quantity 0 ga teng bo'lsa, qatorni o'chirib tashlash
+                productRow.remove();
+            } else {
+                // Aks holda, yangi qiymatni input ga o'rnatish
+                input.value = quantity;
+            }
+
+            // AJAX so'rov orqali serverga ma'lumot yuborish
+            const response = await fetch(`/en/product/add-to-cart/${slug}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                },
+                body: JSON.stringify({ quantity, size }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                updateCart(data);
+            }
+        });
+    });
+
+    function updateCart(data) {
+        // Umumiy subtotal va totalni yangilash
+        subtotalElement.textContent = `${data.cart_subtotal} so'm`;
+        totalElement.textContent = `${data.cart_total} so'm`;
+
+        // Har bir mahsulot uchun subtotalni yangilash
+        data.cart_items.forEach(item => {
+            const subtotalCell = document.querySelector(`tr[data-slug="${item.slug}"][data-size="${item.size}"] .product-subtotal`);
+            if (subtotalCell) {
+                subtotalCell.textContent = `${item.subtotal} so'm`;
+            }
+        });
+    }
+});
+
+</script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

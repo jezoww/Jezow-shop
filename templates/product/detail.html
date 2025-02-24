@@ -1,0 +1,174 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop for Clothes</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <div class="logo">Jezow's shop <img id="logo_jezow" src="{% static 'images/logo.jpg' %}" alt="Logo image"></div>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+            <li><a href="{% url 'shop-men' %}">{% trans 'Shop Men' %}</a></li>
+            <li><a href="{% url 'shop-women' %}">{% trans 'Shop Women' %}</a></li>
+            <li><a href="{% url 'new-arrivals' %}">{% trans 'New arrivals' %}</a></li>
+            <li><a href="{% url 'best-products' %}">{% trans 'Best products' %}</a></li>
+            <li><a href="#footer">{% trans 'Contact' %}</a></li>
+            <li><a href="{% url 'history' %}">{% trans 'Orders' %}</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+        <div class="language-switcher">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <select name="language" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                            {{ language.name_local }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="{% url 'cart' %}" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i><span class="cart-count">{{ cart_count }}</span>
+            </a>
+        {% else %}
+            <div class="user-icon" onclick="toggleDropdown()">
+                <i class="fas fa-user"></i>
+            </div>
+            <div id="userDropdown" class="dropdown-content">
+                <a href="{% url 'login' %}">{% trans 'Login' %}</a>
+                <a href="{% url 'register' %}">{% trans 'Register' %}</a>
+            </div>
+        {% endif %}
+    </div>
+
+</header>
+
+<div class="product-container">
+    <div class="slider">
+        <div class="slides">
+            {% for image in product.images.all %}
+                <img src="{{ image.image.url }}" alt="{{ product.name }}" class="slide">
+            {% endfor %}
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+
+    <div class="product-details">
+        <h1>{{ product.name }}</h1>
+        <p class="price">{{ product.price|intcomma }} so'm</p>
+        <p class="description">{{ product.description }}</p>
+        <form action="{% url 'add-to-cart' product.slug %}">
+            {% csrf_token %}
+            <label>{% trans 'Size' %}:</label>
+            <div class="size-options">
+                {% if product.about_product.first.size %}
+                    {% for size in product.about_product.all %}
+                        <label class="size-label">
+                            <input type="radio" name="size" value="{{ size.size }}" required>
+                            <span>{{ size.size }}</span>
+                        </label>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+        <p class="categories">{% trans 'Category' %}: {{ product.category }}</p>
+        <div class="safe-checkout">
+            <p>{% trans 'Guaranteed Quality Checkout' %}</p>
+        </div>
+    </div>
+</div>
+
+<section class="recommended-products">
+    <h2>{% trans 'Related Products' %}</h2>
+    <div id="recommended-product-list" class="product-listt">
+        {% for product in products %}
+            <div class="product-recommend">
+                <a href="{% url 'product-detail' product.slug %}">
+                    {% with product.images.all|first as image %}
+                        {% if image %}
+                            <img src="{{ image.image.url }}"
+                                 alt="">
+                        {% else %}
+                            <p>No image available for this product.</p>
+                        {% endif %}
+                    {% endwith %}
+                    <h3>{{ product.name|truncatewords:5 }}</h3>
+                    <p>{{ product.name }} so'm</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<footer id="footer">
+    <div class="social-media">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="{% static 'images/instagram_icon.png' %}" alt="Instagram">
+        </a>
+        <a href="https://t.me/jezow1" target="_blank">
+            <img src="{% static 'images/telegram_icon.png' %}" alt="Telegram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="{% static 'images/facebook_icon.png' %}" alt="Facebook">
+        </a>
+        <a href="#" id="phoneIcon">
+            <img src="{% static 'images/operator_icon.png' %}" alt="Phone number">
+        </a>
+        <div id="phoneModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Telefon raqamim</h3>
+                <div class="phone-container">
+                    <p id="phoneNumber">+998 33 564-11-43</p>
+                    <button id="copyButton" class="copy-button" style="margin-left: 10px; cursor: pointer;">📋
+                        Nusxalash
+                    </button>
+                </div>
+                <p id="copyMessage" class="copy-message" style="display: none; color: green;">Nusxalandi!</p>
+            </div>
+        </div>
+    </div>
+    <p>© 2024 YourShop. All rights reserved.</p>
+</footer>
+<script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>

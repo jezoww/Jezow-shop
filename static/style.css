@@ -1,0 +1,1894 @@
+/* Reset some basic styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: url('images/hero-image.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Optional: add overlay to improve text readability */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-shop-men {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shop-women:hover {
+    background-color: #ff4500;
+}
+
+.btn-shop-women {
+    margin-left: 12px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shop-men:hover {
+    background-color: #ff4500;
+}
+
+/* Sections styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center; /* Mahsulotlarni o'rtada joylashtirish */
+    flex-wrap: wrap;
+    gap: 15px; /* Mahsulotlar orasidagi bo'shliqni kamaytirish */
+}
+
+.product {
+    background-color: #d3d1ce;
+    width: 18%; /* Mahsulot kengligini sozlash */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.product-special-offer {
+    width: 40%;
+    margin-bottom: 27px;
+    background-color: #d3d1ce;
+    padding: 27px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-special-offer img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-special-offer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-special-offer p {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-listt {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+.product img {
+    width: 100%;
+    height: 72%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+
+}
+
+.product p {
+    font-size: 16px;
+    color: white;
+}
+
+.product a {
+    text-decoration: none;
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product-special-offer:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product-recommend {
+    background-color: #d3d1ce;
+    width: 18.5%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-recommend img {
+    width: 100%;
+    height: 72%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-recommend h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+
+}
+
+.product-recommend p {
+    font-size: 16px;
+    color: white;
+}
+
+.product-recommend:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* About products section */
+.about-products img {
+    width: 100%;
+    height: 72%;
+    margin-top: 20px;
+}
+
+/* Reviews section */
+.reviews .review {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333 !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 20px 0 !important;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-photo {
+    flex: 1;
+}
+
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 40px;
+}
+
+.about-text h3 {
+    color: #ff7f50;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text .read-more {
+    font-size: 16px;
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #ff7f50;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.about-text .read-more:hover {
+    color: #333;
+    border-color: #333;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2); /* Enlarge the icon slightly on hover */
+}
+
+/* Modalning o'zini yashirish uchun */
+
+.modal {
+    display: none; /* Modalni avval yashiradi */
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ekran markazida joylashish */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Orqa fonda qora yarim shaffof */
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%; /* Mobil qurilmalarda yaxshi ko'rinish uchun */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center; /* Kontentni markazlashtirish */
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Telefon raqamini ko'rsatadigan konteyner */
+.phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Telefon raqam va tugma uchun styling */
+#phoneNumber {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.copy-button {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.copy-button:hover {
+    background-color: #3700b3;
+}
+
+.copy-message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo on the left */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Navigation menu centered */
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white; /* Set color to white by default for visibility */
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #007bff; /* Underline for the active link */
+    color: #007bff; /* Change color for the active link */
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: relative; /* Ensure the container is the reference point for absolute positioning */
+}
+
+.header-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    position: relative; /* Needed for absolute positioning of the cart count */
+}
+
+.header-icons a:hover {
+    color: #007bff;
+}
+
+/* Style the cart count */
+.cart-count {
+    position: absolute;
+    top: -8px; /* Adjust based on the size of the icon */
+    right: -10px; /* Adjust based on the size of the icon */
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+#logo_jezow {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+/* Authentication Pages (Register, Login) Styles */
+/* .auth-section {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.auth-section .container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-section label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.auth-section input[type="text"],
+.auth-section input[type="email"],
+.auth-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.auth-section .btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-section .btn-submit:hover {
+    background-color: #0056b3;
+} */
+#auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-image: url('images/auth-background.webp'); /* Use the generated background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 900px; /* Adjust the maximum width */
+    width: 100%;
+    margin: 20px auto; /* Center the container */
+    padding: 40px 20px; /* Add padding */
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: #ff6347;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 99, 71, 0.1);
+}
+
+.auth-content {
+    flex: 1;
+    padding: 40px; /* Increase padding for comfort */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px; /* Increase padding for input fields */
+    margin: 10px 0; /* Adjust margin for better spacing */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-button:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+.auth-link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding to the image */
+}
+
+.auth-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Order History Page Styles */
+.order-history-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.order-history-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.order-history-section h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.order-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.order-history-table th,
+.order-history-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.order-history-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.order-history-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-about-page.webp'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.about-section {
+    position: relative;
+    padding: 100px 0;
+    color: black; /* Change text color to black for better visibility */
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-about-page.webp'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Content Wrapper Styling */
+.content-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the content horizontally */
+    flex-direction: column; /* Stack the text and image vertically */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background to highlight content */
+    border-radius: 20px; /* Soft rounding for a modern feel */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* About Text Styling */
+.about-text {
+    max-width: 600px;
+    text-align: center; /* Center align the text */
+    margin-bottom: 40px; /* Add space between text and image */
+}
+
+.about-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: black; /* Change header color to black */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: black; /* Change paragraph color to black */
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Button Styling */
+.btn-discover-more {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Add more margin to separate it from the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+.btn-discover-more:hover {
+    background-color: #e5533d;
+    transform: translateY(-5px); /* Slight lift on hover for interactivity */
+}
+
+/* Image Styling */
+.about-image img {
+    max-width: 80%; /* Adjusted to 80% to center the image and make it smaller */
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhance the shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Center the image */
+}
+
+.about-image img:hover {
+    transform: scale(1.02); /* Slight zoom on hover for a modern effect */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Intensify shadow on hover */
+}
+
+/* Values Section */
+.values-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.values-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.value {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.value h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.value p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Updated styling for the dropdown menu */
+.header-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ikonalar orasidagi masofa */
+}
+
+.user-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 24px;
+    color: white;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Buni `top: 100%` qilib, dropdownni ikonkadan pastda paydo bo'lishini ta'minlaymiz */
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left; /* Matnni chapga yo'naltirish */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #333; /* Dropdownning orqa fonini qora qilamiz */
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Hover holatida fon rangini o'zgartirish */
+}
+
+.show {
+    display: block;
+}
+
+
+#profile-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    color: #333;
+    flex: 1;
+    text-align: center;
+    margin: 0; /* Remove margin to center-align the title */
+}
+
+.back-button {
+    background-color: transparent;
+    color: #ff6347;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 99, 71, 0.1);
+}
+
+.logout-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #e5533d;
+}
+
+.profile-content {
+    margin-top: 20px;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and change button */
+}
+
+.change-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.change-button:hover {
+    background-color: #0056b3;
+}
+
+.address {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.add-address-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+}
+
+.add-address-button:hover {
+    background-color: #218838;
+}
+
+
+.save-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%; /* Full width for better UX */
+    text-align: center;
+}
+
+.save-button:hover {
+    background-color: #218838;
+}
+
+
+.language-switcher {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.language-switcher select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* Common alert styles */
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/* Specific alert styles */
+.alert-info {
+    background-color: #17a2b8;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+
+a, a:visited, a:active, a:hover {
+    text-decoration: none !important;
+}
+
+.messages {
+  margin: 10px 0;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+
+/* Mobil qurilmalar uchun dizaynni optimallashtirish */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh; /* Qisqartirilgan balandlik */
+    }
+
+    .hero-content h1 {
+        font-size: 32px; /* Kichikroq sarlavha */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Matn kattaligini kichraytirish */
+    }
+
+    .btn-shop-men, .btn-shop-women {
+        padding: 8px 16px; /* Tugmalarni kichraytirish */
+    }
+
+    .product {
+        width: 45%; /* Mahsulot kengligini moslashuvchan qilish */
+    }
+
+    .product-special-offer {
+        width: 90%; /* Kengroq bo'lishi uchun */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh; /* Yana qisqartirilgan balandlik */
+    }
+
+    .hero-content h1 {
+        font-size: 24px; /* Kichikroq sarlavha */
+    }
+
+    .hero-content p {
+        font-size: 14px; /* Matn kattaligini kichraytirish */
+    }
+
+    .btn-shop-men, .btn-shop-women {
+        padding: 6px 12px; /* Tugmalarni yanada kichraytirish */
+        font-size: 14px; /* Tugma matnini kichraytirish */
+    }
+
+    .product {
+        width: 90%; /* Mahsulotlar bir qatorga moslashuvchan joylashadi */
+    }
+
+    .product-special-offer {
+        width: 100%; /* Mahsulot to'liq kenglikni egallaydi */
+    }
+}
+@media (max-width: 768px) {
+    .product-special-offer {
+        width: 90%; /* Mahsulot kengligini moslashuvchan qilish */
+    }
+
+    .product-listt {
+        flex-wrap: wrap; /* Mahsulotlar yangi qatorda joylashadi */
+        justify-content: center; /* Markazlash */
+    }
+
+    .product, .product-recommend {
+        width: 45%; /* Mahsulot kengligini kichraytirish */
+    }
+
+    .reviews .review {
+        width: 90%; /* Sharh kengligini kichraytirish */
+    }
+
+    .about-content {
+        flex-direction: column; /* Vertikal joylashuv */
+        text-align: center; /* Matnni markazlash */
+    }
+
+    .about-photo {
+        margin-bottom: 20px; /* Matn va surat orasidagi bo'shliq */
+    }
+
+    .about-text {
+        margin-left: 0; /* Matn chet bo'shlig'ini olib tashlash */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-special-offer img,
+    .product img,
+    .product-recommend img,
+    .about-products img {
+        height: auto; /* Tasvir balandligini avtomatik qilish */
+    }
+
+    .product, .product-recommend {
+        width: 100%; /* Mahsulotlar bir qator bo'ylab joylashadi */
+    }
+
+    .about-content {
+        padding: 0 10px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    .reviews .review {
+        width: 100%; /* Sharh to'liq kenglikni egallaydi */
+    }
+
+    footer {
+        padding: 15px 10px; /* Footerni ixchamroq qilish */
+    }
+}
+@media (max-width: 768px) {
+    .about-text h2 {
+        font-size: 28px; /* Kichikroq sarlavha */
+    }
+
+    .about-text h3 {
+        font-size: 16px; /* H3 sarlavhasini kichraytirish */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Matn kattaligini kamaytirish */
+        line-height: 1.5; /* O'qish qulayligi uchun satrlar orasini qisqartirish */
+    }
+
+    .about-text .read-more {
+        font-size: 14px; /* "Read More" matnining kattaligini moslashtirish */
+    }
+
+    .social-media img {
+        width: 24px; /* Ijtimoiy tarmoq belgilarini kichraytirish */
+        height: 24px;
+    }
+
+    .modal-content {
+        width: 90%; /* Modalni kichik ekranlar uchun moslashtirish */
+        padding: 15px;
+    }
+
+    #phoneNumber {
+        font-size: 20px; /* Telefon raqamini moslashtirish */
+    }
+
+    .copy-button {
+        font-size: 14px; /* Tugma matnining kattaligini kamaytirish */
+        padding: 5px 8px;
+    }
+
+    header {
+        flex-direction: column; /* Vertikal joylashuv */
+        align-items: flex-start; /* Elementlarni chapga joylash */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 24px; /* Sarlavhani yanada kichraytirish */
+    }
+
+    .about-text h3 {
+        font-size: 14px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .social-media {
+        gap: 10px; /* Belgilar orasidagi bo'shliqni kamaytirish */
+    }
+
+    .modal-content {
+        padding: 10px; /* Modal ichidagi bo'shliqni kamaytirish */
+    }
+
+    #phoneNumber {
+        font-size: 18px;
+    }
+
+    .copy-button {
+        font-size: 12px; /* Tugma matnini yanada kichraytirish */
+    }
+
+    header {
+        padding: 5px; /* Ichki bo'shliqni qisqartirish */
+        text-align: center; /* Markazlash */
+    }
+}
+@media (max-width: 768px) {
+    /* Logo kichraytiriladi */
+    .logo {
+        font-size: 20px;
+        text-align: center; /* Mobil qurilmalarda markazlashtirish */
+    }
+
+    /* Navigation menyu vertikal bo'ladi */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Matn kattaligini moslashtirish */
+    }
+
+    .header-icons {
+        gap: 10px; /* Belgilar orasidagi masofani kamaytirish */
+    }
+
+    .cart-count {
+        top: -5px;
+        right: -5px;
+        font-size: 10px; /* Kichikroq yozuv */
+    }
+
+    /* Authentication container moslashtirish */
+    .auth-container {
+        flex-direction: column; /* Vertikal joylashuv */
+        padding: 20px; /* Ichki bo'shliqni kamaytirish */
+        max-width: 100%; /* To'liq kenglikni egallash */
+        box-shadow: none; /* Soyani olib tashlash */
+    }
+
+    .auth-content {
+        padding: 20px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    .auth-content h2 {
+        font-size: 24px; /* Kichikroq sarlavha */
+    }
+
+    .auth-form input {
+        padding: 10px;
+        font-size: 14px; /* Matn kattaligini moslashtirish */
+    }
+
+    .auth-button {
+        padding: 10px;
+        font-size: 14px; /* Tugma matnining kattaligini kichraytirish */
+    }
+
+    .back-button {
+        font-size: 14px; /* "Back" tugmasining matnini kichraytirish */
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px; /* Logoni kichraytirish */
+    }
+
+    nav ul {
+        gap: 5px; /* Elementlar orasidagi masofani yanada kamaytirish */
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .header-icons {
+        gap: 5px;
+    }
+
+    .auth-container {
+        padding: 10px; /* Ichki bo'shliqni yanada qisqartirish */
+    }
+
+    .auth-content h2 {
+        font-size: 20px;
+    }
+
+    .auth-form input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .auth-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .back-button {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+@media (max-width: 768px) {
+    /* Authentication Page */
+    .auth-button {
+        padding: 10px;
+        font-size: 14px; /* Tugma matnini kichiklashtirish */
+    }
+
+    .auth-image {
+        padding: 10px; /* Tasvir atrofi bo'shliqni qisqartirish */
+    }
+
+    .auth-image img {
+        border-radius: 5px; /* Radiusni kamaytirish */
+    }
+
+    .auth-link {
+        font-size: 12px; /* Kichikroq matn */
+        margin-top: 10px; /* Bo'shliqni kamaytirish */
+    }
+
+    /* Order History Section */
+    .order-history-section h1 {
+        font-size: 24px; /* Sarlavha kattaligini kichraytirish */
+    }
+
+    .order-history-table th, .order-history-table td {
+        padding: 8px; /* Jadvaldagi kataklarni kichiklashtirish */
+        font-size: 12px; /* Matn hajmini kichraytirish */
+    }
+
+    .order-history-table {
+        font-size: 12px; /* Umumiy jadval matn kattaligi */
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column; /* Vertikal joylashuv */
+        gap: 20px; /* Elementlar orasidagi bo'shliqni kamaytirish */
+    }
+
+    .about-image {
+        min-width: 100%; /* To'liq kenglikni egallash */
+    }
+
+    .about-section {
+        padding: 30px 10px; /* Ichki bo'shliqni qisqartirish */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Authentication Page */
+    .auth-button {
+        padding: 8px;
+        font-size: 12px; /* Matnni kichraytirish */
+    }
+
+    .auth-link {
+        font-size: 10px; /* Matnni yanada kichraytirish */
+    }
+
+    .auth-image img {
+        box-shadow: none; /* Soyani olib tashlash */
+    }
+
+    /* Order History Section */
+    .order-history-section h1 {
+        font-size: 20px; /* Yanada kichikroq sarlavha */
+    }
+
+    .order-history-table th, .order-history-table td {
+        padding: 5px; /* Jadval bo'shlig'ini qisqartirish */
+    }
+
+    /* About Section */
+    .about-content {
+        gap: 10px; /* Elementlar orasidagi bo'shliqni yana qisqartirish */
+    }
+
+    .about-section {
+        padding: 20px 5px; /* Minimal bo'shliq */
+    }
+}
+@media (max-width: 768px) {
+    /* About Section */
+    .about-section {
+        padding: 60px 10px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    .content-wrapper {
+        padding: 30px 15px; /* Mobil qurilmalar uchun qulay bo'lishi uchun */
+        flex-direction: column; /* Vertikal joylashuv */
+    }
+
+    .about-text h1 {
+        font-size: 32px; /* Kichikroq sarlavha */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Matn hajmini kichraytirish */
+    }
+
+    .btn-discover-more {
+        padding: 10px 24px; /* Tugma hajmini kichraytirish */
+        font-size: 14px; /* Matnni kichikroq qilish */
+    }
+
+    .about-image img {
+        max-width: 90%; /* Rasmni kichraytirish */
+    }
+
+    /* Values Section */
+    .values-content {
+        flex-direction: column; /* Vertikal joylashuv */
+        gap: 15px; /* Elementlar orasidagi masofani qisqartirish */
+    }
+
+    .value {
+        min-width: 100%; /* To'liq kenglikni egallash */
+    }
+}
+
+@media (max-width: 480px) {
+    /* About Section */
+    .content-wrapper {
+        padding: 20px 10px;
+    }
+
+    .about-text h1 {
+        font-size: 28px; /* Yanada kichikroq sarlavha */
+    }
+
+    .about-text p {
+        font-size: 14px; /* Matnni yanada kichraytirish */
+    }
+
+    .btn-discover-more {
+        padding: 8px 20px;
+        font-size: 12px; /* Matnni kichraytirish */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Rasmni maksimal moslashtirish */
+    }
+
+    /* Values Section */
+    .values-content {
+        gap: 10px; /* Elementlar orasidagi masofani yanada qisqartirish */
+    }
+
+    .value {
+        padding: 15px; /* Bo'shliqni qisqartirish */
+    }
+
+    .value img {
+        border-radius: 5px; /* Radiusni kamaytirish */
+    }
+}
+@media (max-width: 768px) {
+    /* .value Section */
+    .value h3 {
+        font-size: 18px; /* Kichikroq sarlavha */
+        margin-bottom: 10px;
+    }
+
+    .value p {
+        font-size: 14px; /* Matn hajmini kichraytirish */
+        line-height: 1.5;
+    }
+
+    /* Header Icons */
+    .header-icons {
+        gap: 10px; /* Ikonalar orasidagi masofani kamaytirish */
+    }
+
+    .user-icon,
+    .cart-icon {
+        font-size: 20px; /* Ikonalarni kichraytirish */
+    }
+
+    .cart-count {
+        top: -5px;
+        right: -5px;
+        font-size: 10px; /* Kichikroq raqam ko'rsatish */
+        padding: 2px 4px;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-content {
+        min-width: 140px; /* Kenglikni moslashtirish */
+    }
+
+    .dropdown-content a {
+        font-size: 14px; /* Matn hajmini kichraytirish */
+        padding: 10px 14px;
+    }
+
+    /* Profile Page */
+    #profile-body {
+        padding: 10px; /* Ichki bo'shliqni qo'shish */
+    }
+
+    .profile-container {
+        padding: 20px; /* Ichki bo'shliqni kamaytirish */
+        max-width: 90%; /* To'liq kenglikni egallash */
+    }
+
+    .profile-header h2 {
+        font-size: 20px; /* Sarlavhani kichraytirish */
+    }
+
+    .back-button,
+    .logout-button {
+        font-size: 12px; /* Tugma matnining kattaligini kichraytirish */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* .value Section */
+    .value h3 {
+        font-size: 16px; /* Yanada kichikroq sarlavha */
+    }
+
+    .value p {
+        font-size: 12px; /* Matnni kichraytirish */
+    }
+
+    /* Header Icons */
+    .header-icons {
+        gap: 8px;
+    }
+
+    .user-icon,
+    .cart-icon {
+        font-size: 18px;
+    }
+
+    .cart-count {
+        top: -4px;
+        right: -4px;
+        font-size: 8px;
+        padding: 1px 3px;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-content {
+        min-width: 120px;
+    }
+
+    .dropdown-content a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    /* Profile Page */
+    #profile-body {
+        padding: 5px;
+    }
+
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-header h2 {
+        font-size: 18px;
+    }
+
+    .back-button,
+    .logout-button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+@media (max-width: 768px) {
+    /* Profile Page Adjustments */
+    .profile-section h3 {
+        font-size: 18px; /* Kichikroq sarlavha */
+    }
+
+    .profile-section p {
+        font-size: 14px; /* Matn hajmini kichraytirish */
+        flex-direction: column; /* Matnni va tugmani ustma-ust joylashtirish */
+        align-items: flex-start; /* Chapga joylashuv */
+    }
+
+    .change-button {
+        font-size: 10px; /* Tugmani kichraytirish */
+        margin: 5px 0; /* Tugma va matn orasida bo'shliq */
+    }
+
+    .add-address-button {
+        font-size: 12px; /* Tugma matnining kattaligini kichraytirish */
+        padding: 8px 16px; /* Tugma hajmini moslashtirish */
+    }
+
+    .save-button {
+        font-size: 14px; /* Tugma matnining hajmini kichraytirish */
+        padding: 8px 16px; /* Tugmani kichraytirish */
+    }
+
+    /* Alerts */
+    .alert {
+        font-size: 14px; /* Xabar matnining hajmini kichraytirish */
+        padding: 10px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    .alert-success,
+    .alert-error,
+    .alert-info,
+    .alert-warning {
+        font-size: 14px;
+    }
+
+    /* Language Switcher */
+    .language-switcher select {
+        font-size: 12px; /* Tanlov maydonining hajmini kichraytirish */
+        padding: 4px; /* Ichki bo'shliqni qisqartirish */
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #333; /* Orqa fon rangi */
+    }
+
+    .logo {
+        font-size: 20px;
+        color: #fff; /* Oq rangli logotip matni */
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 15px;
+        background-color: #555; /* Tugma rang */
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #777; /* Hover effekti */
+    }
+
+    .header-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .header-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Profile Page Adjustments */
+    .profile-section h3 {
+        font-size: 16px; /* Yanada kichikroq sarlavha */
+    }
+
+    .profile-section p {
+        font-size: 12px; /* Matnni kichraytirish */
+        align-items: flex-start; /* Chapga joylashuv */
+    }
+
+    .change-button {
+        font-size: 10px; /* Kichikroq tugma matni */
+        padding: 5px 8px; /* Tugma hajmini moslashtirish */
+    }
+
+    .add-address-button {
+        font-size: 10px; /* Kichikroq matn hajmi */
+        padding: 6px 12px; /* Tugma hajmini kichraytirish */
+    }
+
+    .save-button {
+        font-size: 12px; /* Tugma matni kichikroq */
+        padding: 6px 12px;
+    }
+
+    /* Alerts */
+    .alert {
+        font-size: 12px; /* Xabar matnining hajmini kichraytirish */
+        padding: 8px; /* Ichki bo'shliqni yana qisqartirish */
+    }
+
+    /* Language Switcher */
+    .language-switcher select {
+        font-size: 10px; /* Kichikroq tanlov maydoni matni */
+        padding: 3px; /* Ichki bo'shliqni kamaytirish */
+    }
+    header {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .header-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Umumiy stil */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,89 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body id="profile-body">
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div class="profile-container">
+    <div class="profile-header">
+        <a href="{% url 'index' %}">
+            <button class="back-button">← {% trans 'Back' %}</button>
+        </a>
+        <h2>{{ user.profile.first_name }} {{ user.profile.last_name }} Profile</h2>
+        <a href="{% url 'logout' %}">
+            <button class="logout-button">{% trans 'Logout' %}</button>
+        </a>
+    </div>
+    <div class="profile-content">
+        <div class="profile-section">
+            <h3>{% trans 'Personal Information' %}:</h3>
+            <p><strong>{% trans 'First Name' %}:</strong> {{ user.profile.first_name }}</p>
+            <p><strong>{% trans 'Last Name' %}:</strong> {{ user.profile.last_name }}</p>
+            <p><strong>{% trans 'Phone Number' %}:</strong> {{ user.phone }}</p>
+            <a href="{% url 'update-profile' %}">
+                <button type="button" class="change-button">{% trans 'Change' %}</button>
+            </a>
+        </div>
+
+        <div class="profile-section">
+            <h3>{% trans 'Addresses' %}</h3>
+            <form method="post" action="{% url 'update-address' %}">
+                {% csrf_token %}
+                <div id="addresses">
+                    {% for address in user.addresses.all %}
+                        <div class="address-item" data-id="{{ address.id }}">
+                            <p>{{ address.address }}</p>
+                            <button type="button" class="change-button" onclick="editAddress({{ address.id }})">{% trans 'Change' %}
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" id="add-address-button" class="add-address-button" onclick="addAddress()">{% trans 'Add Address' %}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editAddress(id) {
+        var addressItem = document.querySelector(`.address-item[data-id="${id}"]`);
+        var addressText = addressItem.querySelector('p').textContent.trim();
+        addressItem.innerHTML = `
+        <input type="hidden" name="address_id" value="${id}">
+        <input type="text" name="address_${id}" value="${addressText}" required>
+        <button type="submit" class="save-button">Save</button>
+    `;
+    }
+
+    function addAddress() {
+        var addressesDiv = document.getElementById('addresses');
+        var newAddressDiv = document.createElement('div');
+        newAddressDiv.classList.add('address-item');
+        newAddressDiv.innerHTML = `
+        <input type="text" name="new_address" placeholder="Enter new address" required>
+        <button type="submit" class="save-button">Save</button>
+    `;
+        addressesDiv.appendChild(newAddressDiv);
+    }
+
+</script>
+
+</body>
+</html>

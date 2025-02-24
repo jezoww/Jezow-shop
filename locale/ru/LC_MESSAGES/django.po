@@ -1,0 +1,462 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-06 13:02+0500\n"
+"Language: uz\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\apps\product\views.py:54
+msgid "Men"
+msgstr "Для мужчин"
+
+#: .\apps\product\views.py:72 .\templates\product\about.html:107
+#, fuzzy
+msgid "Women"
+msgstr "Для женщин"
+
+#: .\apps\product\views.py:90 .\templates\index.html:37
+#: .\templates\product\about.html:32 .\templates\product\detail.html:39
+#: .\templates\product\shop.html:48 .\templates\product\shop.html:50
+#: .\templates\user\history.html:24
+msgid "New arrivals"
+msgstr "Новинки"
+
+#: .\apps\product\views.py:108 .\templates\index.html:38
+#: .\templates\product\about.html:33 .\templates\product\detail.html:40
+#: .\templates\product\shop.html:53 .\templates\product\shop.html:55
+#: .\templates\user\history.html:25
+msgid "Best products"
+msgstr "Лучшие продукты"
+
+#: .\apps\product\views.py:122
+msgid "Added!"
+msgstr "Добавлено!"
+
+#: .\apps\product\views.py:173
+msgid "You cannot order! First you need to add some products!"
+msgstr "Вы не можете заказать! Сначала добавьте несколько продуктов!"
+
+#: .\apps\user\forms.py:20
+msgid "Password is short"
+msgstr "Пароль слишком короткий"
+
+#: .\apps\user\forms.py:27
+msgid "This phone already registered"
+msgstr "Этот номер телефона уже зарегистрирован"
+
+#: .\apps\user\forms.py:33
+msgid "Passwords do not match"
+msgstr "Пароли не совпадают"
+
+#: .\apps\user\forms.py:56
+msgid "Phone number or password is incorrect!"
+msgstr "Номер телефона или пароль неверны!"
+
+#: .\apps\user\views.py:50
+msgid "Successfully registered!"
+msgstr "Успешная регистрация!"
+
+#: .\apps\user\views.py:69
+msgid "Successfully logged in!"
+msgstr "Успешный вход в систему!"
+
+#: .\apps\user\views.py:117
+msgid "Successfully logged out!"
+msgstr "Успешный выход из системы!"
+
+#: .\apps\user\views.py:182
+msgid "Before ordering, please add your location."
+msgstr "Перед заказом, пожалуйста, добавьте свое местоположение."
+
+#: .\apps\user\views.py:196
+msgid "Ordered!"
+msgstr "Заказано!"
+
+#: .\apps\user\views.py:200
+msgid "You do not have any products."
+msgstr "У вас нет товаров."
+
+#: .\templates\index.html:34 .\templates\product\about.html:29
+#: .\templates\product\detail.html:36 .\templates\product\shop.html:36
+#: .\templates\user\history.html:21
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\index.html:35 .\templates\index.html:84
+#: .\templates\product\about.html:30 .\templates\product\detail.html:37
+#: .\templates\product\shop.html:38 .\templates\product\shop.html:40
+#: .\templates\user\history.html:22
+msgid "Shop Men"
+msgstr "Магазин для мужчин"
+
+#: .\templates\index.html:36 .\templates\index.html:85
+#: .\templates\product\about.html:31 .\templates\product\detail.html:38
+#: .\templates\product\shop.html:43 .\templates\product\shop.html:45
+#: .\templates\user\history.html:23
+msgid "Shop Women"
+msgstr "Магазин для женщин"
+
+#: .\templates\index.html:39 .\templates\product\about.html:34
+#: .\templates\product\detail.html:41 .\templates\product\shop.html:57
+#: .\templates\user\history.html:26
+msgid "Contact"
+msgstr "Контакты"
+
+#: .\templates\index.html:40 .\templates\product\about.html:35
+#: .\templates\product\detail.html:42 .\templates\product\shop.html:58
+#: .\templates\user\history.html:27
+msgid "Orders"
+msgstr "Заказы"
+
+#: .\templates\index.html:72 .\templates\product\about.html:67
+#: .\templates\product\shop.html:90 .\templates\user\history.html:59
+#: .\templates\user\login.html:81 .\templates\user\register.html:105
+msgid "Login"
+msgstr "Войти"
+
+#: .\templates\index.html:73 .\templates\product\about.html:68
+#: .\templates\product\shop.html:91 .\templates\user\history.html:60
+#: .\templates\user\login.html:83 .\templates\user\register.html:103
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\templates\index.html:82
+msgid "Welcome to Jezow's shop"
+msgstr "Добро пожаловать в магазин Jezow"
+
+#: .\templates\index.html:83
+msgid "Your best source for stylish men's clothing."
+msgstr "Лучший источник стильной мужской одежды."
+
+#: .\templates\index.html:96
+msgid "About Us"
+msgstr "О нас"
+
+#: .\templates\index.html:97
+msgid "Selected materials designed for comfort and sustainability"
+msgstr "Отобранные материалы для комфорта и устойчивости"
+
+#: .\templates\index.html:99
+msgid ""
+"\n"
+"                    At YourShop, we believe in providing our customers with "
+"the highest quality fashion at affordable\n"
+"                    prices.\n"
+"                    Our collections are inspired by the latest trends while "
+"maintaining a focus on comfort and\n"
+"                    sustainability.\n"
+"                    Every piece is carefully crafted with attention to "
+"detail to ensure it fits perfectly into your\n"
+"                    wardrobe.\n"
+"                "
+msgstr ""
+
+#: .\templates\index.html:108
+msgid "READ MORE"
+msgstr "ЧИТАТЬ ДАЛЕЕ"
+
+#: .\templates\index.html:116
+msgid "Our Best Products"
+msgstr "Наши лучшие продукты"
+
+#: .\templates\index.html:138
+msgid "Special Offers"
+msgstr "Специальные предложения"
+
+#: .\templates\index.html:143
+#, python-format
+msgid "Summer Sale - 50%% Off"
+msgstr "Летняя распродажа - скидка до 50%%"
+
+#: .\templates\index.html:149
+msgid "Buy 1 Get 1 Free"
+msgstr "Купите 1, получите 1 бесплатно"
+
+#: .\templates\index.html:158
+msgid "More Deals"
+msgstr "Больше предложений"
+
+#: .\templates\index.html:180
+msgid "New Arrivals"
+msgstr "Новинки"
+
+#: .\templates\index.html:218
+msgid "Recommended for You"
+msgstr "Рекомендуем вам"
+
+#: .\templates\index.html:256 .\templates\product\shop.html:136
+#: .\templates\user\history.html:136
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: .\templates\index.html:260 .\templates\product\shop.html:140
+#: .\templates\user\history.html:140
+msgid "Copy"
+msgstr "Копировать"
+
+#: .\templates\index.html:263 .\templates\product\shop.html:143
+#: .\templates\user\history.html:143
+msgid "Copied!"
+msgstr "Скопировано!"
+
+#: .\templates\product\about.html:80
+msgid "Find Your Style."
+msgstr "Найдите свой стиль."
+
+#: .\templates\product\about.html:80
+msgid "Refresh Your Look."
+msgstr "Освежите свой образ."
+
+#: .\templates\product\about.html:81
+#, fuzzy
+#| msgid ""
+#| "                At Jezow's Shop, we're redefining fashion with a focus on "
+#| "sustainability\n"
+#| "                and style. Our mission is to offer clothing that not only "
+#| "looks good but also makes you feel great.\n"
+#| "                Explore our collections and discover the perfect fit for "
+#| "your unique style.\n"
+#| "            "
+msgid ""
+"\n"
+"                At Jezow's Shop, we're redefining fashion with a focus on "
+"sustainability\n"
+"                and style. Our mission is to offer clothing that not only "
+"looks good but also makes you feel great.\n"
+"                Explore our collections and discover the perfect fit for "
+"your unique style.\n"
+"            "
+msgstr ""
+"                В магазине Jezow мы переосмысливаем моду с акцентом на "
+"устойчивость\n"
+"                и стиль. Наша миссия - предлагать одежду, которая не только "
+"выглядит хорошо, но и заставляет вас чувствовать себя прекрасно.\n"
+"                Изучите наши коллекции и найдите идеальный стиль для себя.\n"
+
+#: .\templates\product\about.html:87
+msgid "Go to Shop"
+msgstr "Перейти в магазин"
+
+#: .\templates\product\about.html:98
+msgid "Made for you"
+msgstr "Сделано для вас"
+
+#: .\templates\product\about.html:102
+#, fuzzy
+#| msgid "Men"
+msgid "Man"
+msgstr "Для мужчин"
+
+#: .\templates\product\about.html:103
+#, fuzzy
+#| msgid "Explore the latest trends in men"
+msgid "Explore the latest trends in men's fashion."
+msgstr "Узнайте о последних тенденциях мужской моды."
+
+#: .\templates\product\about.html:108
+msgid "Discover sustainable styles that never compromise on comfort."
+msgstr ""
+"Откройте для себя устойчивые стили, которые не идут на компромисс с "
+"комфортом."
+
+#: .\templates\product\about.html:112
+msgid "Best"
+msgstr "Лучшее"
+
+#: .\templates\product\about.html:113
+msgid "Best products are made for you!"
+msgstr "Лучшие продукты созданы для вас!"
+
+#: .\templates\product\detail.html:80 .\templates\product\ordering.html:25
+#: .\templates\user\cart.html:35 .\templates\user\history.html:106
+msgid "Size"
+msgstr "Размер"
+
+#: .\templates\product\detail.html:93
+msgid "Category"
+msgstr "Категория"
+
+#: .\templates\product\detail.html:95
+msgid "Guaranteed Quality Checkout"
+msgstr "Гарантированное качество оформления заказа"
+
+#: .\templates\product\detail.html:101
+#, fuzzy
+#| msgid "Best products"
+msgid "Related Products"
+msgstr "Лучшие продукты"
+
+#: .\templates\product\ordering.html:17 .\templates\user\cart.html:26
+#: .\templates\user\login.html:65 .\templates\user\profile.html:26
+#: .\templates\user\register.html:63 .\templates\user\update-data.html:15
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\product\ordering.html:18
+msgid "Order Confirmation"
+msgstr "Подтверждение заказа"
+
+#: .\templates\product\ordering.html:24 .\templates\user\cart.html:34
+#: .\templates\user\history.html:105
+msgid "Product"
+msgstr "Продукт"
+
+#: .\templates\product\ordering.html:26 .\templates\user\cart.html:36
+#: .\templates\user\history.html:108
+msgid "Price"
+msgstr "Цена"
+
+#: .\templates\product\ordering.html:27 .\templates\user\cart.html:37
+#: .\templates\user\history.html:107
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\templates\product\ordering.html:28 .\templates\user\cart.html:92
+#: .\templates\user\history.html:75
+msgid "Total"
+msgstr "Итого"
+
+#: .\templates\product\ordering.html:48
+msgid "Total Amount"
+msgstr "Общая сумма"
+
+#: .\templates\product\ordering.html:54
+msgid "Shipping Address"
+msgstr "Адрес доставки"
+
+#: .\templates\product\ordering.html:57 .\templates\user\profile.html:40
+#: .\templates\user\profile.html:52
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\product\ordering.html:68
+msgid "Confirm Order"
+msgstr "Подтвердить заказ"
+
+#: .\templates\product\shop.html:99
+msgid "Showing all"
+msgstr "Показаны все"
+
+#: .\templates\product\shop.html:99
+msgid "results"
+msgstr "результаты"
+
+#: .\templates\user\cart.html:28
+msgid "Cart"
+msgstr "Корзина"
+
+#: .\templates\user\cart.html:38 .\templates\user\cart.html:88
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: .\templates\user\cart.html:85
+msgid "Cart totals"
+msgstr "Итог корзины"
+
+#: .\templates\user\cart.html:96
+#, fuzzy
+#| msgid "Orders"
+msgid "Ordering"
+msgstr "Заказы"
+
+#: .\templates\user\history.html:69
+msgid "Your Order History"
+msgstr "История ваших заказов"
+
+#: .\templates\user\history.html:73
+msgid "Order ID"
+msgstr "Номер заказа"
+
+#: .\templates\user\history.html:74
+msgid "Date"
+msgstr "Дата"
+
+#: .\templates\user\history.html:76
+msgid "Status"
+msgstr "Статус"
+
+#: .\templates\user\history.html:77
+msgid "Actions"
+msgstr "Действия"
+
+#: .\templates\user\history.html:104
+msgid "Image"
+msgstr "Изображение"
+
+#: .\templates\user\login.html:67
+#, fuzzy
+#| msgid "Welcome to Jezow's shop"
+msgid "Login to Jezow's Shop"
+msgstr "Добро пожаловать в магазин Jezow"
+
+#: .\templates\user\login.html:70 .\templates\user\register.html:82
+#, fuzzy
+#| msgid "Phone number"
+msgid "Phone number:"
+msgstr "Номер телефона"
+
+#: .\templates\user\login.html:73 .\templates\user\register.html:85
+#, fuzzy
+#| msgid "Password is short"
+msgid "Password:"
+msgstr "Пароль слишком короткий"
+
+#: .\templates\user\login.html:83
+msgid "Don't have an account?"
+msgstr "Нет аккаунта?"
+
+#: .\templates\user\profile.html:30
+msgid "Logout"
+msgstr "Выход"
+
+#: .\templates\user\profile.html:35 .\templates\user\update-data.html:22
+#, fuzzy
+#| msgid "Order Confirmation"
+msgid "Personal Information"
+msgstr "Подтверждение заказа"
+
+#: .\templates\user\profile.html:36 .\templates\user\update-data.html:23
+msgid "First Name"
+msgstr "Имя"
+
+#: .\templates\user\profile.html:37 .\templates\user\update-data.html:24
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: .\templates\user\profile.html:38
+#, fuzzy
+#| msgid "Phone number"
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: .\templates\user\profile.html:45
+msgid "Addresses"
+msgstr "Адреса"
+
+#: .\templates\user\profile.html:57
+msgid "Add Address"
+msgstr "Добавить адрес"
+
+#: .\templates\user\register.html:65
+msgid "Create an Account"
+msgstr "Создать аккаунт"
+
+#: .\templates\user\register.html:94
+msgid "Confirm password:"
+msgstr "Подтвердите пароль"
+
+#: .\templates\user\register.html:105
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+#: .\templates\user\update-data.html:9 .\templates\user\update-data.html:16
+msgid "Update Profile"
+msgstr "Обновить профиль"
+
+#: .\templates\user\update-data.html:28
+#, fuzzy
+#| msgid "Change"
+msgid "Save Changes"
+msgstr "Изменить"

@@ -1,0 +1,83 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{% static 'ordering.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body id="confirm-order-body">
+<div class="confirmation-container">
+    <div class="header-row">
+        <a href="{% url 'cart' %}" class="back-button">← {% trans 'Back' %}</a>
+        <h1>{% trans 'Order Confirmation' %}</h1>
+    </div>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+    <div class="order-info">
+        <table class="order-table">
+            <thead>
+            <tr>
+                <th>{% trans 'Product' %}</th>
+                <th>{% trans 'Size' %}</th>
+                <th>{% trans 'Price' %}</th>
+                <th>{% trans 'Quantity' %}</th>
+                <th>{% trans 'Total' %}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.product.name }}</td>
+                    {% if item.size %}
+                        <td>{{ item.size }}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                    <td>{{ item.product.price|intcomma }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.get_subtotal|intcomma }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <p class="order-total"><strong>{% trans 'Total Amount' %}:</strong>{{ subtotal|intcomma }}</p>
+    </div>
+
+    <form method="post" action="{% url 'create-order' %}">
+        {% csrf_token %}
+        <div class="address-info">
+            <h3>{% trans 'Shipping Address' %}</h3>
+            <div id="current-address" class="address-container">
+                <span id="selected-address">{{ user.addresses.first.address }}</span>
+                <button type="button" class="change-button" onclick="showAddressOptions()">{% trans 'Change' %}</button>
+            </div>
+            <div id="address-options" style="display: none;">
+                <select name="address" id="address-dropdown" onchange="updateAddress()">
+                    {% for address in user.addresses.all %}
+                        <option value="{{ address.address }}">{{ address.address }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="confirm-order-button">{% trans 'Confirm Order' %}</button>
+    </form>
+</div>
+
+<script src="{% static 'ordering.js' %}"></script>
+</body>
+</html>

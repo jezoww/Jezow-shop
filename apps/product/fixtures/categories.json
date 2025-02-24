@@ -1,0 +1,90 @@
+[
+  {
+    "model": "product.Category",
+    "pk": 1,
+    "fields": {
+      "name": "Shim",
+      "name_en": "Trousers",
+      "name_ru": "Брюки",
+      "name_uz": "Shim",
+      "slug": "shim"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 2,
+    "fields": {
+      "name": "Poyabzal",
+      "name_en": "Shoes",
+      "name_ru": "Обувь",
+      "name_uz": "Poyabzal",
+      "slug": "poyabzal"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 3,
+    "fields": {
+      "name": "Ko'ylak",
+      "name_en": "Shirt",
+      "name_ru": "Рубашка",
+      "name_uz": "Ko'ylak",
+      "slug": "koylak"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 4,
+    "fields": {
+      "name": "Futbolka",
+      "name_en": "T-shirt",
+      "name_ru": "Футболка",
+      "name_uz": "Futbolka",
+      "slug": "futbolka"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 5,
+    "fields": {
+      "name": "Sviter va kardigan",
+      "name_en": "Sweater and Cardigan",
+      "name_ru": "Свитер и кардиган",
+      "name_uz": "Sviter va kardigan",
+      "slug": "sviter-va-kardigan"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 6,
+    "fields": {
+      "name": "Hudi va svitshot",
+      "name_en": "Hoodie and Sweatshirt",
+      "name_ru": "Худи и свитшот",
+      "name_uz": "Hudi va svitshot",
+      "slug": "hudi-va-svitshot"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 7,
+    "fields": {
+      "name": "Sumka va aksessuarlar",
+      "name_en": "Bags and Accessories",
+      "name_ru": "Сумки и аксессуары",
+      "name_uz": "Sumka va aksessuarlar",
+      "slug": "sumka-va-aksessuarlar"
+    }
+  },
+  {
+    "model": "product.Category",
+    "pk": 8,
+    "fields": {
+      "name": "Shorti",
+      "name_en": "Shorts",
+      "name_ru": "Шорты",
+      "name_uz": "Shorti",
+      "slug": "shorti"
+    }
+  }
+]

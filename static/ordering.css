@@ -1,0 +1,365 @@
+#confirm-order-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.confirmation-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-row h1 {
+    margin: 0;
+}
+
+.back-button {
+    background-color: transparent;
+    color: #ff6347;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 99, 71, 0.1);
+}
+
+.user-info, .order-info, .address-info {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-table th, .order-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-table th {
+    background-color: #f2f2f2;
+}
+
+.order-total {
+    font-size: 18px;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.address {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.change-button:hover {
+    background-color: #0056b3;
+}
+
+#address-options {
+    margin-top: 10px;
+}
+
+#address-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-address-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.add-address-button:hover {
+    background-color: #218838;
+}
+
+.confirm-order-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.confirm-order-button:hover {
+    background-color: #e5533d;
+}
+
+#map-container {
+    margin-top: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.confirm-address-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-address-button:hover {
+    background-color: #0056b3;
+}
+
+/* New Address Input */
+#new-address-input {
+    margin-top: 10px;
+}
+
+#new-address {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#new-address-input button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#new-address-input button:hover {
+    background-color: #218838;
+}
+
+/* Align Change button to the right of the container */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#selected-address {
+    flex: 1;
+    text-align: left;
+}
+
+.change-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.change-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    /* General Adjustments */
+    .confirmation-container {
+        padding: 20px; /* Ichki bo'shliqni qisqartirish */
+        max-width: 90%; /* To'liq kenglikni egallash */
+        box-shadow: none; /* Soyani olib tashlash */
+    }
+
+    .header-row h1 {
+        font-size: 20px; /* Sarlavhani kichiklashtirish */
+    }
+
+    .back-button {
+        font-size: 14px; /* Tugma matnini kichiklashtirish */
+        padding: 8px 16px; /* Tugmani kichraytirish */
+    }
+
+    h3 {
+        font-size: 18px; /* Kichikroq sarlavha */
+    }
+
+    /* Order Table Adjustments */
+    .order-table th, .order-table td {
+        padding: 6px; /* Jadval ichki bo'shligini qisqartirish */
+        font-size: 14px; /* Matn hajmini kichraytirish */
+    }
+
+    .order-total {
+        font-size: 16px; /* Matn hajmini kichraytirish */
+    }
+
+    /* Address Section */
+    .address {
+        flex-direction: column; /* Vertikal joylashuv */
+        align-items: flex-start; /* Matnni chapga yo'naltirish */
+    }
+
+    .change-button {
+        font-size: 12px; /* Tugma hajmini kichraytirish */
+        margin-top: 10px; /* Tugma uchun bo'shliq qo'shish */
+        padding: 5px 8px;
+    }
+
+    .add-address-button, .confirm-order-button {
+        font-size: 14px; /* Tugma matni hajmini kichraytirish */
+        padding: 10px; /* Tugma bo'shlig'ini moslashtirish */
+    }
+
+    #address-dropdown {
+        font-size: 14px; /* Dropdown matni hajmini kichraytirish */
+        padding: 8px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    /* Map Section */
+    #map {
+        height: 300px; /* Kichikroq balandlik */
+    }
+
+    /* New Address Input */
+    #new-address {
+        font-size: 14px; /* Matn hajmini kichraytirish */
+    }
+
+    #new-address-input button {
+        font-size: 12px; /* Tugma hajmini kichraytirish */
+        padding: 6px 12px; /* Tugmani kichraytirish */
+    }
+}
+
+@media (max-width: 480px) {
+    /* General Adjustments */
+    .confirmation-container {
+        padding: 15px; /* Yana qisqartirilgan ichki bo'shliq */
+    }
+
+    .header-row h1 {
+        font-size: 18px; /* Yanada kichikroq sarlavha */
+    }
+
+    .back-button {
+        font-size: 12px; /* Tugma matni kichikroq */
+        padding: 5px 10px; /* Tugma bo'shlig'ini qisqartirish */
+    }
+
+    h3 {
+        font-size: 16px; /* Kichikroq sarlavha */
+    }
+
+    /* Order Table Adjustments */
+    .order-table th, .order-table td {
+        padding: 4px; /* Jadval ichki bo'shligini qisqartirish */
+        font-size: 12px; /* Matn hajmini kichraytirish */
+    }
+
+    .order-total {
+        font-size: 14px;
+    }
+
+    /* Address Section */
+    .address {
+        flex-direction: column; /* Vertikal yo'nalishda joylashuv */
+        align-items: flex-start;
+    }
+
+    .change-button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .add-address-button, .confirm-order-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #address-dropdown {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Map Section */
+    #map {
+        height: 250px; /* Kichikroq balandlik */
+    }
+
+    /* New Address Input */
+    #new-address {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #new-address-input button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+

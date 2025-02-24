@@ -1,0 +1,275 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Background Image for About Section */
+.about-section {
+    position: relative;
+    padding: 100px 0;
+    color: black; /* Change text color to black for better visibility */
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-about-page.webp'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Content Wrapper Styling */
+.content-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the content horizontally */
+    flex-direction: column; /* Stack the text and image vertically */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background to highlight content */
+    border-radius: 20px; /* Soft rounding for a modern feel */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* About Text Styling */
+.about-text {
+    max-width: 600px;
+    text-align: center; /* Center align the text */
+    margin-bottom: 40px; /* Add space between text and image */
+}
+
+.about-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: black; /* Change header color to black */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: black; /* Change paragraph color to black */
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Button Styling */
+.btn-discover-more {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Add more margin to separate it from the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+.btn-discover-more:hover {
+    background-color: #e5533d;
+    transform: translateY(-5px); /* Slight lift on hover for interactivity */
+}
+
+/* Image Styling */
+.about-image img {
+    max-width: 80%; /* Adjusted to 80% to center the image and make it smaller */
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhance the shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Center the image */
+}
+
+.about-image img:hover {
+    transform: scale(1.02); /* Slight zoom on hover for a modern effect */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Intensify shadow on hover */
+}
+
+/* Values Section */
+.values-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.values-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.value {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.value h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.value p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the footer background */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+footer .social-media img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    /* About Section Adjustments */
+    .about-section {
+        padding: 60px 10px; /* Ichki bo'shliqni qisqartirish */
+    }
+
+    .content-wrapper {
+        padding: 40px 15px; /* Ichki bo'shliqni kichraytirish */
+        max-width: 100%; /* To'liq kenglikni egallash */
+    }
+
+    .about-text h1 {
+        font-size: 32px; /* Sarlavhani kichiklashtirish */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Matnni kichraytirish */
+        margin-bottom: 20px;
+    }
+
+    .btn-discover-more {
+        padding: 10px 24px; /* Tugma hajmini kichraytirish */
+        font-size: 14px; /* Matn hajmini moslashtirish */
+    }
+
+    .about-image img {
+        max-width: 90%; /* Rasm kengligini moslashtirish */
+    }
+
+    /* Values Section Adjustments */
+    .values-content {
+        flex-direction: column; /* Vertikal joylashuv */
+        gap: 20px; /* Elementlar orasidagi bo'shliqni kamaytirish */
+    }
+
+    .value {
+        padding: 15px; /* Ichki bo'shliqni qisqartirish */
+        min-width: 100%; /* To'liq kenglikni egallash */
+    }
+
+    .value h3 {
+        font-size: 20px; /* Sarlavha hajmini kichraytirish */
+    }
+
+    .value p {
+        font-size: 14px; /* Matn hajmini kichraytirish */
+    }
+}
+
+@media (max-width: 480px) {
+    /* About Section Adjustments */
+    .about-section {
+        padding: 40px 5px; /* Yana qisqartirilgan ichki bo'shliq */
+    }
+
+    .content-wrapper {
+        padding: 30px 10px;
+    }
+
+    .about-text h1 {
+        font-size: 28px; /* Sarlavha hajmini kichraytirish */
+    }
+
+    .about-text p {
+        font-size: 14px; /* Matnni yanada kichraytirish */
+    }
+
+    .btn-discover-more {
+        padding: 8px 20px;
+        font-size: 12px; /* Tugma matnini kichikroq qilish */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Rasmni to'liq kenglikka moslashtirish */
+    }
+
+    /* Values Section Adjustments */
+    .values-content {
+        gap: 10px; /* Elementlar orasidagi bo'shliqni yana qisqartirish */
+    }
+
+    .value {
+        padding: 10px; /* Ichki bo'shliqni yanada kamaytirish */
+    }
+
+    .value h3 {
+        font-size: 18px; /* Kichikroq sarlavha */
+    }
+
+    .value p {
+        font-size: 12px; /* Matn hajmini kichraytirish */
+    }
+
+    /* Footer Section Adjustments */
+    footer .social-media img {
+        width: 24px; /* Belgilarni kichraytirish */
+        height: 24px;
+        margin: 0 5px;
+    }
+}
+

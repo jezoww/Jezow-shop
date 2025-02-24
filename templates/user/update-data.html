@@ -1,0 +1,33 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans 'Update Profile' %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body id="profile-body">
+    <div class="profile-container">
+        <div class="profile-header">
+            <a href="{% url 'profile' %}"><button class="back-button">← {% trans 'Back' %}</button></a>
+            <h2>{% trans 'Update Profile' %}</h2>
+        </div>
+        <div class="profile-content">
+            <form method="post">
+                {% csrf_token %}
+                <div class="profile-section">
+                    <h3>{% trans 'Personal Information' %}</h3>
+                    <p><strong>{% trans 'First Name' %}:</strong> <input type="text" name="first_name" value="{{ user.profile.first_name }}" required></p>
+                    <p><strong>{% trans 'Last Name' %}:</strong> <input type="text" name="last_name" value="{{ user.profile.last_name }}" required></p>
+                </div>
+
+                <!-- Save Changes Button -->
+                <button type="submit" class="change-button">{% trans 'Save Changes' %}</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

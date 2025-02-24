@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cart-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-table {
+    width: 65%;
+    border-collapse: collapse;
+}
+
+.cart-table thead th {
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.cart-table tbody td {
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.product img {
+    width: 70px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.remove-product {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 18px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.quantity-selector {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+
+.quantity-button {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #f0f0f0, #ddd);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quantity-button:hover {
+    background: linear-gradient(135deg, #e0e0e0, #ccc);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #d0d0d0, #bbb);
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quantity-input:focus {
+    border-color: #bbb;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-input:hover {
+    border-color: #ccc;
+}
+
+.cart-totals {
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+}
+
+.cart-totals h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-totals table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cart-totals table td {
+    padding: 10px 0;
+}
+
+.checkout-button {
+    display: block;
+    text-align: center;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.coupon-section {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.coupon-section span {
+    color: #6c757d;
+}
+
+.cart-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.cart-title {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* General message container */
+.message-container {
+    margin: 20px 0;
+}
+
+/* Common alert styles */
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/* Specific alert styles */
+.alert-info {
+    background-color: #17a2b8;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+@media (max-width: 768px) {
+    .cart-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-totals {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .product img {
+        width: 50px;
+        height: auto;
+    }
+
+    .checkout-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-content {
+        gap: 15px;
+    }
+
+    .quantity-selector {
+        flex-direction: column; /* Elementlarni ustma-ust joylashtirish */
+        gap: 10px;
+    }
+
+    .product img {
+        width: 40px;
+    }
+}
+

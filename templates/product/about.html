@@ -1,0 +1,150 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop for Clothes</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <div class="logo">Jezow's shop <img id="logo_jezow" src="{% static 'images/logo.jpg' %}" alt="Logo image"></div>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}" class="active">{% trans 'Home' %}</a></li>
+            <li><a href="{% url 'shop-men' %}">{% trans 'Shop Men' %}</a></li>
+            <li><a href="{% url 'shop-women' %}">{% trans 'Shop Women' %}</a></li>
+            <li><a href="{% url 'new-arrivals' %}">{% trans 'New arrivals' %}</a></li>
+            <li><a href="{% url 'best-products' %}">{% trans 'Best products' %}</a></li>
+            <li><a href="#footer">{% trans 'Contact' %}</a></li>
+            <li><a href="{% url 'history' %}">{% trans 'Orders' %}</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+        <div class="language-switcher">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <select name="language" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                            {{ language.name_local }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="{% url 'cart' %}" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i><span class="cart-count">{{ cart_count }}</span>
+            </a>
+        {% else %}
+            <div class="user-icon" onclick="toggleDropdown()">
+                <i class="fas fa-user"></i>
+            </div>
+            <div id="userDropdown" class="dropdown-content">
+                <a href="{% url 'login' %}">{% trans 'Login' %}</a>
+                <a href="{% url 'register' %}">{% trans 'Register' %}</a>
+            </div>
+        {% endif %}
+    </div>
+
+</header>
+
+<!-- About Section with Background Image -->
+<section class="about-section">
+    <div class="background-image"></div>
+    <div class="content-wrapper">
+        <div class="about-text">
+            <h1>{% trans 'Find Your Style.' %}<br>{% trans 'Refresh Your Look.' %}</h1>
+            <p>{% blocktranslate %}
+                At Jezow's Shop, we're redefining fashion with a focus on sustainability
+                and style. Our mission is to offer clothing that not only looks good but also makes you feel great.
+                Explore our collections and discover the perfect fit for your unique style.
+            {% endblocktranslate %}
+            </p>
+            <a href="{% url 'index' %}" class="btn-discover-more">{% trans 'Go to Shop' %}</a>
+        </div>
+        <div class="about-image">
+            <img src="{% static 'images/about_image.webp' %}" alt="Fashion">
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="container">
+        <h2>{% trans 'Made for you' %}</h2>
+        <div class="values-content">
+            <div class="value">
+                <img src="{% static 'images/quality.webp' %}" alt="Quality">
+                <h3>{% trans 'Man' %}</h3>
+                <p>{% trans "Explore the latest trends in men's fashion." %}</p>
+            </div>
+            <div class="value">
+                <img src="{% static 'images/sustainability.webp' %}" alt="Sustainability">
+                <h3>{% trans 'Women' %}</h3>
+                <p>{% trans 'Discover sustainable styles that never compromise on comfort.' %}</p>
+            </div>
+            <div class="value">
+                <img src="{% static 'images/comfort.webp' %}" alt="Comfort">
+                <h3>{% trans 'Best' %}</h3>
+                <p>{% trans 'Best products are made for you!' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="social-media">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="{% static 'images/instagram_icon.png' %}" alt="Instagram">
+        </a>
+        <a href="https://t.me/jezow1" target="_blank">
+            <img src="{% static 'images/telegram_icon.png' %}" alt="Telegram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="{% static 'images/facebook_icon.png' %}" alt="Facebook">
+        </a>
+        <a href="#" id="phoneIcon">
+            <img src="{% static 'images/operator_icon.png' %}" alt="Phone number">
+        </a>
+        <div id="phoneModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Telefon raqamim</h3>
+                <div class="phone-container">
+                    <p id="phoneNumber">+998 33 564-11-43</p>
+                    <button id="copyButton" class="copy-button" style="margin-left: 10px; cursor: pointer;">📋
+                        Nusxalash
+                    </button>
+                </div>
+                <p id="copyMessage" class="copy-message" style="display: none; color: green;">Nusxalandi!</p>
+            </div>
+        </div>
+    </div>
+    <p>© 2024 YourShop. All rights reserved.</p>
+</footer>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
